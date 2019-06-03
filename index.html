@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Invertir Semilla</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- Para iconos de apps (fb, gmail, twitter, etc) -->
+	<!-- <link href="style.css" rel="stylesheet"> -->
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+.navbar {
+  padding: .8rem;
+}
+.navbar-nav{
+  padding-right: 20px;
+}
+
+.nav-link{
+  font-size: 1.1em !important;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-65%);
+}
+
+.carousel-caption h1{
+  font-size: 450%;
+  text-transform: uppercase;
+  text-shadow: 5px 7px 8px #000;
+}
+
+.carousel-caption h3{
+  font-size: 180%;
+  font-weight: 500%;
+  text-shadow: 4px 6px 8px #000;
+  padding-bottom: 1rem;
+}
+
+.btn-primary{
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.btn-primary:hover{
+  background-color: #0062cc;
+  border: 1px solid #0062cc;
+}
+
+.form{
+  text-align: center;
+}
+
+.jumbrotron{
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.padding{
+  padding-bottom: 2rem;
+}
+
+.welcome{
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr{
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+.fa-code {
+  color: #e54d26;
+}
+
+.fa-bold {
+  color: #563d7c;
+}
+
+.fa-css3 {
+  color: #2163af;
+}
+
+.fa-code, .fa-bold, .fa-css3 {
+  font-size: 4em;
+  margin: 1rem;
+}
+
+.fun {
+  width: 100%
+  margin-bottom: 2rem;
+}
+
+.gif{
+  max-width: 100%;
+}
+
+.social a{
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-twitter {
+  color: #00aced;
+}
+.fa-google-plus-g {
+  color: #dd4b39;
+}
+.fa-instagram {
+  color: #517fa8;
+}
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-facebook:hover, .fa-twitter:hover, .fa-google-plus-g:hover, .fa-instagram:hover, .fa-youtube:hover{
+  color: #d5d5d5;
+}
+
+.bd-example {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border: solid #f8f9fa;
+    border-width: .2rem 0 0;
+}
+
+.logoTCSsm{
+  display: none;
+}
+
+.logoTCSxs{
+  display: none;
+}
+
+.logoCardsSm{
+  display: none;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+hr.light{
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1em; 
+}
+
+footer a{
+  color: #d5d5d5;
+}
+hr.light-100{
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1em; 
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .social a{
+    font-size: 4em;
+    padding: 2rem;
+  }
+  .bd-example {
+  padding: 3rem;
+  margin-right: 0;
+  margin-left: 0;
+  border-width: .3rem;
+  }
+
+  .logoTCSmd{
+    display: none;
+  }
+
+  .logoTCSsm{
+    display: block;
+  }
+
+  .logoCardsMd{
+    display: none;
+  }
+
+  .logoCardsSm{
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+.carousel-caption{
+  position: absolute;
+  top: 45%;
+}
+
+.carousel-caption h1{
+  font-size: 350%;
+}
+
+.carousel-caption h3{
+  font-size: 140%;
+  font-weight: 400%;
+  padding-bottom: .2rem;
+}
+.carousel-caption .btn {
+  font-size: 95%;
+  padding: 8px 14px;
+}
+.display-4{
+  font-size: 200%;
+}
+.social a{
+  font-size: 2.5em;
+  padding: 1.2rem;
+}
+.bd-example {
+  padding: 3rem;
+  margin-right: 0;
+  margin-left: 0;
+  border-width: .3rem;
+}
+.logoTCSsm{
+  display: none;
+}
+
+.logoTCSxs{
+  display: block;
+}
+}
+
+@media (max-width: 576px) {
+.carousel-caption{
+  top: 40%;
+}
+
+.carousel-caption h1{
+  font-size: 250%;
+}
+
+.carousel-caption h3{
+  font-size: 110%;
+}
+.carousel-caption .btn{
+  font-size: 90%;
+  padding: 4px 8px;
+}
+.carousel-indicators{
+  display: none;
+}
+.display-4{
+  font-size: 160%;
+}
+.social a{
+  font-size: 2em;
+  padding: .7rem;
+}
+.bd-example {
+  padding: 3rem;
+  margin-right: 0;
+  margin-left: 0;
+  border-width: .3rem;
+}
+}
+
+@media (max-width: 568px){
+
+.carousel-caption{
+  top: 40%;
+}
+
+.carousel-caption h1{
+  font-size: 200%;
+}
+
+.carousel-caption h3{
+  font-size: 100%;
+}
+
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+	</style>
+</head>
+<body>
+
+<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<!-- logo -->
+			<a class="navbar-brand" href="#">
+				<img src="img/logosemilla.png" class="img-fluid" style="width: 10%">
+			</a>
+
+			<!-- por si queremos agregar botones en la nav bar tipo home, etc -->
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button> -->
+			<!-- <div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Connect</a>
+					</li>
+				</ul>
+			</div> -->
+		</div>
+	</nav>
+
+<!-- Carousel slide -->
+	<div id="slides" class="carousel slide" data-ride="carousel">
+	  <div class="carousel-inner">
+		    <div class="carousel-item active">
+				<img src="img/portadaoscura2.jpg" class="img-fluid" alt="Responsive image" style="filter: blur(0.90px);">
+		        <div class="carousel-caption">
+					<h1 class="display-2">INVIERTE EN STARTUPS</h1>
+					<h3>Ahora podes formar parte de los emprendimientos que van a cambiar el mundo</h3
+				</div>
+		    </div>
+	  </div>
+	</div>
+
+<!--- Welcome Section -->
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<div class="col-12">
+				<h1 class="display-4">Crowfunding para startups</h1>
+			</div>
+			<hr>
+			<div class="col-12">
+				<p class="lead">
+					Puedes invertir en startups de distintos rubros como Fintech, Inteligencia Artificial o Robótica.
+				</p>
+			</div>
+		</div>
+	</div>
+
+<!--- Three Column Section -->
+	<div class="container-fluid padding">
+		<div class="row text-center padding">
+
+			<!-- Emprendimientos Validados col-md-6 col-sm-6 col-xs-12 -->
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="col-md-4 offset-4 logoTCSmd">
+					<img class="card-img-top img-fluid" src="img/emprendimientovalidados.png">
+				</div>
+				<div class="col-sm-6 offset-3 logoTCSsm">
+					<img class="card-img-top img-fluid" src="img/emprendimientovalidados.png">
+				</div>
+				<div class="col-xs-12 logoTCSxs">
+					<img class="card-img-top img-fluid" src="img/emprendimientovalidados.png" style=" width: 25%;">
+				</div>
+				<h3>EMPRENDIMIENTOS VALIDADOS</h3>
+				<p>Las startups postuladas deben aprobar un dificil proceso de selección que incluye la evaluación de incubadoras y expertos de la industria.</p>
+			</div>
+
+			<!-- Diversifica tu Inversion -->
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="col-md-4 offset-4 logoTCSmd">
+					<img class="card-img-top img-fluid" src="img/diversificainversion.png">
+				</div>
+				<div class="col-sm-6 offset-3 logoTCSsm">
+					<img class="card-img-top img-fluid" src="img/diversificainversion.png">
+				</div>
+				<div class="col-xs-12 logoTCSxs">
+					<img class="card-img-top img-fluid" src="img/diversificainversion.png" style=" width: 25%;">
+				</div>
+				<h3>DIVERSIFICA TU INVERSIÓN</h3>
+				<p>En invertirsemilla.com podes practicar en varias empresas con una inversión mínima de $US 500 que es mucho menor a ala cifra habitual del rubro.</p>
+			</div>
+
+			<!-- Construye el Futuro -->
+			<div class="col-sm-12 col-md-4">
+				<div class="col-md-4 offset-4 logoTCSmd">
+					<img class="card-img-top img-fluid" src="img/construyefuturo.png">
+				</div>
+				<div class="col-sm-6 offset-3 logoTCSsm">
+					<img class="card-img-top img-fluid" src="img/construyefuturo.png">
+				</div>
+				<div class="col-xs-12 logoTCSxs">
+					<img class="card-img-top img-fluid" src="img/construyefuturo.png" style=" width: 15%;">
+				</div>
+				<h3>CONSTRUYE EL FUTURO</h3>
+				<p>Los emprendedores son los innovadores y soñadores que tienen el potencial de cambiar el mundo. Apoyándolos también puedes marcar la diferencia.</p>
+			</div>
+		</div>
+		<hr class="my-4">
+	</div>
+
+<!--- About Us Section -->
+	<div class="container-fluid padding" >
+		<div class="row welcome text-center">
+			<div class="col-12">
+				<h1 class="display-4">Conocé más sobre nosotros</h1>
+			</div>
+			<hr>
+		</div>
+		<div class="container" style="padding: 1% 5%;">
+			<div class="embed-responsive embed-responsive-21by9">
+			  <iframe width="560" height="315" src="https://www.youtube.com/embed/hcTPjpPvas8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<hr class="my-4">
+
+<!--- Startups -->
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<div class="col-12">
+				<h1 class="display-4">Encuentra tu startup preferida</h1>
+			</div>
+			<hr>
+		</div>
+	</div>
+
+<!--- Cards col-xs-12 col-sm-6 col-md-4-->
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<!-- logo 1 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-8 offset-3 logoCardsMd">
+					<img class="card-img-top" src="img/logo_ualabee.png">
+				</div>
+				<div class="col-lg-8 logoCardsSm">
+					<img class="card-img-top" src="img/logo_ualabee.png">
+				</div>
+			</div>
+
+			<!-- logo 2 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-8 offset-3 logoCardsMd">
+					<img class="card-img-top" src="img/logodstudio.png">
+				</div>
+				<div class="col-lg-8 logoCardsSm">
+					<img class="card-img-top" src="img/logodstudio.png">
+				</div>
+			</div>
+
+			<!-- logo 3 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-8 offset-3 logoCardsMd">
+					<img class="card-img-top" src="img/logoalpogo.png">
+				</div>
+				<div class="col-lg-8 logoCardsSm">
+					<img class="card-img-top" src="img/logoalpogo.png">
+				</div>
+			</div>
+
+			<!-- logo 4 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-8 offset-3 logoCardsMd">
+					<img class="card-img-top" src="img/logoediploma2.png">
+				</div>
+				<div class="col-lg-8 logoCardsSm">
+					<img class="card-img-top" src="img/logoediploma2.png">
+				</div>
+			</div>
+
+			<!-- logo 5 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-8 offset-3 logoCardsMd">
+					<img class="card-img-top" src="img/logoevaluados.png">
+				</div>
+				<div class="col-lg-8 logoCardsSm">
+					<img class="card-img-top" src="img/logoevaluados.png">
+				</div>
+			</div>
+
+			<!-- logo 6 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-8 offset-3 logoCardsMd">
+					<img class="card-img-top" src="img/logofreestyle.png">
+				</div>
+				<div class="col-lg-8 logoCardsSm">
+					<img class="card-img-top" src="img/logofreestyle.png">
+				</div>
+			</div>
+
+			<!-- logo 7 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-5 offset-5 logoCardsMd">
+					<img class="card-img-top" src="img/logoweiv.png">
+				</div>
+				<div class="col-md-8 offset-3 logoCardsSm">
+					<img class="card-img-top" src="img/logoweiv.png">
+				</div>
+			</div>
+
+			<!-- logo 8 -->
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="col-lg-5 offset-5 logoCardsMd">
+					<img class="card-img-top" src="img/logowilab.png">
+				</div>
+				<div class="col-md-8 offset-3 logoCardsSm">
+					<img class="card-img-top" src="img/logowilab.png">
+				</div>
+			</div>
+
+			<!-- logo 9 -->
+			<div class="col-md-4 col-sm-4 col-6">
+				<div class="col-md-4 offset-4 logoCardsMd">
+					<img class="card-img-top" src="img/logotimejobs.png">
+				</div>
+				<div class="col-md-6 offset-3 logoCardsSm">
+					<img class="card-img-top" src="img/logotimejobs.png">
+				</div>
+			</div>
+
+			<!-- logo 10 -->
+			<div class="col-md-4 col-sm-4 col-6">
+				<div class="col-md-4 offset-4 logoCardsMd">
+					<img class="card-img-top" src="img/logouiduu.png">
+				</div>
+				<div class="col-md-6 offset-3 logoCardsSm">
+					<img class="card-img-top" src="img/logouiduu.png">
+				</div>
+			</div>
+
+			<!-- logo 11 -->
+			<div class="col-md-4 col-sm-4 col-6">
+				<div class="col-md-4 offset-4 logoCardsMd">
+					<img class="card-img-top" src="img/logopivot.png">
+				</div>
+				<div class="col-md-4 offset-3 logoCardsSm">
+					<img class="card-img-top" src="img/logopivot.png">
+				</div>
+			</div>
+		</div>
+		<hr class="my-4">
+	</div>
+
+<!--- Contact Section -->
+	<div class="container-fluid paddin">
+		<div class="row padding">
+			<div class="row welcome text-center">
+				<div class="col-12">
+					<h1 class="display-4">Comienza a invertir</h1>
+				</div>
+				<hr>
+				<div class="col-lg-12">
+					<p>Dejanos tu email y te contactamos.</p>
+				</div>
+			</div>
+			<div class="row welcome text-center">
+				<form class="col-12 text-center" id="form">
+				  <div class="form-row">
+					    <div class="col-5 offset-3">
+					      <label class="sr-only" for="inlineFormInput">Email</label>
+					      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Email">
+					    </div>
+					    <div class="col-1">
+					      <button type="button" data-targget="#modal" class="btn btn-primary mb-2 float-left" onclick="showAlert()">Enviar</button>
+					    </div>
+					    <div class="alert alert-success col-8 offset-2" id="alert" role="alert" style="display: none;">
+					    	<a href="#" class="close" data-dismiss="alert" area-label="close">&times;</a>
+							  Hemos recibido su email, nos pondremos en contacto con usted.
+						</div>
+				  </div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+
+<!--- Connect -->
+	<!-- <div class="container-fluid padding">
+		<div class="row text-center padding">
+			<div class="col-12">
+				<h2>Connect</h2>
+			</div>
+			<div class="col-12 social padding">
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-youtube"></i></a>
+			</div>
+		</div>
+	</div> -->
+
+<!--- Footer -->
+	<footer>
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+					<h5>info@invertirsemilla.com</h5>
+				</div>
+				<div class="col-md-4">
+					<h5>+54 9 351 676 4741</h5>
+				</div>
+				<div class="col-md-4">
+					<h5>Córdoba, Argentina</h5>
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5>Powered by invertirsemilla.com</h5>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script type="text/javascript">
+	function showAlert(){
+		var alert = document.getElementById("alert");
+	
+		alert.style.display = "block";
+	}
+</script>
+
+</body>
+</html>
